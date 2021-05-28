@@ -88,6 +88,15 @@ matches:
         params:
           format: "%Y-%m-%d"
 
+  - trigger: "ydate"
+    replace: "{{yesterdate}}"
+    vars:
+      - name: yesterdate
+        type: date
+        params:
+          format: "%Y-%m-%d"
+          offset: -86400
+
   # Shell commands
   - trigger: ":shell"
     replace: "{{output}}"
