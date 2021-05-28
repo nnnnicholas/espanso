@@ -1,0 +1,99 @@
+# espanso configuration file
+
+# This is the default configuration file, change it as you like it
+# You can refer to the official documentation:
+# https://espanso.org/docs/
+
+# Matches are the substitution rules, when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  # - trigger: ":espanso"
+  #   replace: "Hi there!"
+
+  - trigger: "llol"
+    replace: "😂"
+
+  - trigger: "pperf"
+    replace: "👌"
+
+  - trigger: "tthumb"
+    replace: "👍"
+
+  - trigger: "ffire"
+    replace: "🔥"
+
+  - trigger: "llight"
+    replace: "⚡"
+
+  - trigger: "hhouse"
+    replace: "🏡"
+
+  - trigger: "hheart"
+    replace: "❤️"
+
+  - trigger: "ppeace"
+    replace: "✌"
+
+  - trigger: "pphone"
+    replace: "☎"
+
+  - trigger: "eeyes"
+    replace: "👀"
+
+  - trigger: "ntweet"
+    replace: "https://twitter.com/nnnnicholas"
+
+  - trigger: "nname"
+    replace: "Nicholas Shulman"
+
+  - trigger: "aaddress"
+    replace: "3-3860 Rue Saint-Hubert, Montreal, QC, H2L 4A5"
+
+  - trigger: "ppostal"
+    replace: "H2L 4A5"
+
+  - trigger: "ddisc"
+    replace: "nicholas#7610"
+
+  - trigger: "eemail"
+    replace: "nicholas.g.shulman@gmail.com"
+
+  - trigger: "nemail"
+    replace: "nick.shulman@gmail.com"
+
+  - trigger: "ttel"
+    replace: "5149462453"
+
+  - trigger: "gtel"
+    replace: "2252429253"
+
+  - trigger: "eeth"
+    replace: "Ξ"
+
+  - trigger: "qqdisc"
+    replace: "https://nftstory.life/discord"
+
+  - trigger: "qqlife"
+    replace: "https://nftstory.life"
+
+  - trigger: "qqinstr"
+    replace: "https://hackmd.io/@nftstory/testnetInstructions"
+
+  # Dates
+  - trigger: "ddate"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%Y-%m-%d"
+
+  # Shell commands
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo Hello from your shell"
