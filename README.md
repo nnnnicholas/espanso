@@ -1,1 +1,1 @@
-# espanso
+# espanso configuration file
